@@ -1,0 +1,17 @@
+title: "Programmieren 2 (wif-prg2) Refresher"
+email: korbinian.riedhammer@fh-rosenheim.de
+description: "Materialien zum Refresher Programmieren 2"
+baseurl: ""
+url: "https://hsro-wif-prg2.github.io/refresher"
+exclude: ["LICENSE", "Remarks.md"]
+github_username: ["sikoried"]
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge

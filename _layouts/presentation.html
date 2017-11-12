@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title | strip_html }}</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+        margin-bottom: 10px;
+      }
+      li {
+        line-height: 145%;
+        margin-bottom: 15px;
+        height: auto;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      footer {
+        position: absolute; 
+        bottom: 12px; 
+        left: 20px
+      }
+      footer svg {
+        height: 20px;
+      }
+      pre {tab-size: 3;}
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+{{ content }}
+    </textarea>
+    <script src="/assets/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+        navigation: {scroll: false,},
+        highlightLanguage: 'java',
+        highlightStyle: 'monokai',
+        highlightLines: true,
+        highlightSpans: true
+      });
+    </script>
+  </body>
+</html>
