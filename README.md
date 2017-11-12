@@ -16,31 +16,53 @@ _Die Teilnahme ist freiwillig und unverbindlich, es gibt keine Prüfung._
 
 # Inhalt
 
-- **(14.11.2017)**
-- **(21.11.2017)**
-- **(28.11.2017)**
-- **(5.12.2017)**
-- **(12.12.2017)**
-- **(19.12.2017)**
+Es werden die wichtigsten Inhalte von [Programmieren 2](https://hsro-wif-prg2.github.io/) in verkürzter Form wiederholt und an Beispielen vertieft.
+**Wichtig:** Dies ist eine _Ergänzung aber kein Ersatz_ zur ursprünglichen Vorlesung, und hat keinen Anspruch auf Vollständigkeit.
 
-Datenstrukturen. Liste und Iterator; Generics
+- Datenstrukturen: Liste, Set und Map (assoziatives Array), und deren Realisierung als Array, verkettete Liste oder Baumstruktur.
+- Algorithmen: Binäre Suche, sortieren.
+- Sprachfeatures: Interfaces, Vererbung, abstrakte Klassen und Generics.
+- Datenverarbeitung: Traversierung mit Iteratoren und _filter-map-reduce_.
+- Parallele Verarbeitung mit Threads.
 
-Interfaces. Typische Beispiele: Comparator<T>, Comparable<T>
+# Terminplan
 
-Vererbung und abstrakte Klassen: Zustände und Zustandsübergänge (Zooübung; Automatikschaltgetriebe (abstract void schalten()), 
-Getränkeautomat (abstract void getraenkMischen), ..., immer dann, wenn viel gemeinsam ist, und nur ein Detail anders).
+- **Vererbung und abstrakte Klassen (14.11.2017)**
 
-Datenstrukturen:
-allgemein: List<T>, Set<T>, Map<T>, Iterator<T>.
-...und Realisierungen: einfach verkettete Liste, doppelt verkette Liste, rueckwaerts verkette Liste, sortierte Liste (prio-queue), Stack, Queue, ArrayList, Binaerbaum, n-aerer Baum, ...mit Comparable<T> oder Comparator<T>
-...daraus abgeleitete Strukturen: Set und Map realisiert als Liste, Baum oder Hasharray
-...Iteratoren auf diesen Strukturen: Vorwärtsiterator, Rückwärtsiterator (bei doppelt verketter Liste einfach; sonst via Stack), Baumiterator (Agenda!!!), sortierter Iterator (im Baum: depth-first-abstieg), filternder Iterator (seek!)
-Algorithmen, Patterns und Sprachfeatures:
-Factorypattern: Generatorfunktionen für Instanzen eines Interafaces (z.B. die iterator() Methode, oder andere)
-Breiten- und Tiefensuche: Agenda als Stack oder Liste?
-Verwendung von bounds um Schnittstellenkompatibilität zu erzwingen
-sortieren: insertion sort, merge sort (rekursiv)
-Rekursion und Iteration: Aufrufreihenfolgen, Besuchsreihenfolge im Baum (z.B. Binaerbaum: links- und rechts-absteigende Rekursion)
+	Abstrakten Klassen erklärt am Beispiel der Implementierung eines Zustandsautomaten.
+
+- **Listen und Generics (21.11.2017)**
+
+	Die Liste ist eine der wichtigsten Datenstrukturen der Informatik.
+	Java's Generics erlauben uns, diese unabhängig vom Datentyp zu implementieren.
+
+- **Set als Binärbaum (28.11.2017)**
+
+	Ein Set ist definiert als eine (ungeordnete) Menge von Elementen ohne Duplikate.
+	Die Interfaces `Comparable<T>` und `Comparator<T>` helfen uns beim aufbau von Binärbäumen, welche Sets effizient modellieren können.
+
+- **Iterator und Factory (12.12.2017)**
+
+	Ein `Iterator<T>` ist ein Objekt, welches die Traversierung einer Datenstruktur ermöglicht, ohne deren innere Struktur zu kennen.
+	Eine _Factory_ stellt Objekte her, welche einem Interface genügen.
+
+- **Rekursion (5.12.2017)**
+	
+	Rekursive Funktionen rufen sich selbst wieder auf.
+	Wir betrachten als Beispiele die Pre-/In-/Postfixschreibweise, binäre Suche, sowie Sortieren am Beispiel von merge sort.
+
+- **Parallele Verarbeitung (19.12.2017)**
+
+	Threads helfen bei der parallelen Verarbeitung von Daten.
+	Gibt es sowohl Produzenten als auch Konsumenten, so kann es zu Deadlocks kommen.
 
 
-_Subscribe to [https://github.com/hsro-wif-prg2/refresher/](https://github.com/hsro-wif-prg2/refresher/) repository to follow updates._
+# Weitere Anregungen zum Selbstudium
+
+- Iteratoren: vorwärts, rückwärts, sortiert, sortiert mit Comparator.
+- Baumtraversierung: Rekursiver Links- und Rechtsabstieg; iterativ mit Agenda
+- Erweiterte Datenstrukturen: doppelt verkette Liste, n-ärer Baum, Hashset, Hashmap
+- Sortieren: insertion, selection, merge, quick
+
+
+_Abboniere das [https://github.com/hsro-wif-prg2/refresher/](https://github.com/hsro-wif-prg2/refresher/) Repository um bei Updates benachrichtigt zu werden._
