@@ -1,0 +1,293 @@
+---
+layout: presentation
+title: Vererbung und Abstrakte Klassen
+permalink: /vererbung-und-abstrakte-klassen-slides/
+---
+
+layout: true
+
+<footer>
+    <span class="icon github">
+    <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+    </svg>
+    </span>
+    <a href="https://github.com/sikoried"><span class="username">sikoried</span></a>
+</footer>
+
+---
+
+# Klassen und Schnittstellen
+
+![Klassen](../assets/klasse.svg)
+
+---
+
+# Klassen und Schnittstellen
+
+<img style="float: left; height: 100%" src="../assets/vererbung.svg">
+
+```java
+interface I { 
+    void methode();  // keine Implementierung
+}
+
+class K implements I {
+    public void methode() {
+        System.out.println("Hallo, Welt!");
+    }
+}
+
+I inst = new K();
+```
+
+```java
+class B {
+    void methode() {
+        System.out.println("Hallo, Welt!");
+    }
+}
+
+class K extends B {
+    // methode() ist bereits verfügbar, und kann überschrieben werden
+}
+
+B inst = new K();
+```
+
+---
+
+# Überschreiben von Methoden
+
+```java
+class B {
+    void methode1() { System.out.println("Ich bin Klasse B.methode1()"); }
+    void methode2() { System.out.println("Ich bin Klasse B.methode2()"); }
+}
+```
+```java
+class K extends B {
+    void methode2() { System.out.println("Ich bin Klasse K.methode2()"); }
+}
+```
+```java
+K k = new B();
+k.methode1();  // "Ich bin Klasse B.methode1()"
+k.methode2();  // "Ich bin KLasse K.methode2()"
+```
+
+---
+
+# Abstrakte Basisklassen: Ein Beispiel
+
+<img style="float: left; height: 100%" src="../assets/auto.svg">
+
+```java
+class AutoManuell {
+    Pedal gas, bremse, kupplung;
+    Schaltung schaltung;
+    Zuendung zuendung;
+
+    private void anfahren() {
+        kupplung.druecken();
+        schaltung.einlegen(1);
+        kupplung.loslassen();
+        gas.druecken();
+    }
+
+    public void fahren(int km) {
+        anlassen();
+        anfahren();
+        // km fahren...
+        abstellen();
+    }
+
+    public int anzahlGaenge() {
+        return schaltung.gaenge();
+    }
+
+    // ...
+}
+```
+
+---
+
+# Abstrakte Basisklassen: Ein Beispiel
+
+<img style="float: left; height: 100%" src="../assets/auto.svg">
+
+```java
+class AutoAutomatik {
+    private Pedal gas, bremse;
+    private AutomatikGetriebe automatik;
+    private Zuendung zuendung;
+
+    private void anfahren() {
+        bremse.druecken();
+        automatik.drive();
+        gas.druecken();
+    }
+
+    public void fahren(int km) {
+        anlassen();
+        anfahren();
+        // km fahren...
+        abstellen();
+    }
+
+    // ...
+}
+```
+
+---
+
+# Vererbung?
+
+<img style="float: left; height: 100%" src="../assets/automatik.svg">
+
+```java
+class AutoAutomatik extends Auto {
+    private AutomatikGetriebe automatik;
+    protected void anlassen() {
+        bremse.druecken();
+        zuendung.an();
+        zuendung.start();
+    }
+    protected void anfahren() {
+        bremse.druecken();
+        automatik.drive();
+        gas.druecken();
+    }
+    protected void abstellen() {
+        bremse.druecken();
+        automatik.park();
+    }
+}
+```
+
+---
+
+# Besser: Abstrakte Basisklasse
+
+<img style="float: left; height: 100%" src="../assets/autoabstrakt.svg">
+
+```java
+abstract class Auto {
+    protected abstract void anlassen();
+    protected abstract void anfahren();
+    protected abstract void abstellen();
+    public void fahren(int km) {
+        anlassen();
+        anfahren();
+        abstellen();
+    }
+}
+class AutoManuell extends Auto {
+    protected void anfahren() {
+        kupplung.druecken();
+        schaltung.einlegen(1);
+        kupplung.loslassen();
+        gas.druecken();
+    }
+    // ...
+}
+class AutoAutomatik extends Auto {
+    protected void anfahren() {
+        bremse.druecken();
+        automatik.drive();
+        gas.druecken();
+    }
+    // ...
+}
+```
+
+---
+
+<img style="float: left; width: 45%" src="../assets/zustandsautomat.svg">
+
+# Übungsaufgabe: Zustandsautomat
+
+- Zustand und Eingabe gibt neuen Zustand
+- _Akzeptor_: Ein Zustandsübergang pro Eingabe
+- Falsche Eingabe: `IllegalStateException`
+
+---
+
+# Schlechte Implementierung
+
+```java
+class Automat {
+    enum Zustand { schlafend, aufgewacht, geduscht, ... }
+    Zustand aktuell = schlafend;
+    void weiterschalten(String s) {
+        if (s == null) 
+            return;
+
+        switch (aktuell) {
+            case schlafend:
+                if (s.equals("aufwecken")) aktuell = wach;
+                else throw new IllegalStateException();
+                break;
+            case aufgewacht:
+                if (s.equals("snooze")) aktuell = schlafend;
+                else if (s.equals("duschen")) aktuell = geduscht;
+                else if (s.equals("fruehstuecken")) aktuell = wach;
+                else throw new IllegalStateException();
+                break;
+            // ...
+        }
+    }
+}
+```
+
+---
+
+# Besser: Abstrakte Basisklasse
+
+![Zustaende](../assets/zustaende.svg)
+
+---
+
+```java
+abstract class State {
+    public State accept(String input) {
+        if (input == null) 
+            return this;
+        else
+            return successor(input);
+    }
+    /**
+     * Gibt den Nachfolgezustand in Abhängigkeit vom Input
+     * zurück, oder wirft eine IllegalStateException.
+     */
+    protected abstract State successor(String input);
+}
+```
+```java
+class Automaton {
+    private State currentState = new Schlafend();
+    public boolean accept(String[] input) {
+        try {
+            for (String in : input) {
+                currentState = currentState.accept(in);
+            }
+
+            return true;
+        } catch (IllegalStateException e) {
+            return false;
+        }
+        
+    }
+}
+```
+
+---
+
+# Aufgabe
+
+1. Machen Sie sich mit der Funktionsweise der `Automaton.accept()` Methode vertraut.
+2. Implementieren Sie die Klassen `Schlafend`, `Aufgewacht`, `Geduscht`, `Wach`, `Fleissig`, `Faul`, `Muede`, und `Bettfertig` welche die entsprechenden Zustände des Automaten modellieren sollen.
+    Als Beispiel: Der Nachfolgezustand von `Aufgewacht` ist vom Typ `Geduscht`, wenn die Eingabe `"duschen"` war, oder `Wach` wenn die Eingabe "fruehstuecken" war; bei anderen Eingaben wird eine `IllegalStateException` geworfen.
+3. Testen Sie Ihre Zustände für einige Inputarrays.
+
