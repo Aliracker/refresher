@@ -1,0 +1,25 @@
+@startuml
+
+[*] --> schlafend
+aufgewacht --> schlafend : snooze
+schlafend --> aufgewacht : aufwecken
+aufgewacht --> geduscht : duschen
+aufgewacht --> wach : frühstücken
+geduscht --> wach : frühstücken
+wach --> fleissig : lernen
+wach --> faul : fernsehen
+fleissig --> müde : lernen
+faul --> müde : gammeln
+müde --> bettfertig : umziehen
+bettfertig -> schlafend : hinlegen
+müde --> schlafend : hinlegen
+
+
+' state geduscht {
+'	[*] --> duschbereit : ausziehen
+'	duschbereit --> nass : duschen
+'	nass --> trocken : abtrocknen
+'	trocken --> [*]
+'}
+
+@enduml

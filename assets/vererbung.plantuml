@@ -1,0 +1,19 @@
+@startuml
+
+class B {
+	
+}
+
+class K1 extends B {
+	
+}
+
+interface I {
+	
+}
+
+class K2 implements I {
+	
+}
+
+@enduml

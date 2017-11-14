@@ -1,0 +1,27 @@
+@startuml
+
+class Automaton {
+	- current: State
+	+ accept(input: String[]): boolean
+}
+
+abstract class State {
+	+ accept(input: String): State
+	# successor(input: String): State
+}
+
+class Schlafend extends State {
+	# successor(input: String): State
+}
+
+class Aufgewacht extends State {
+	# successor(input: String): State
+}
+
+class Geduscht extends State {
+	# successor(input: String): State
+}
+
+Automaton *-- State
+
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+
+class Zuendung {
+	+ an()
+	+ start()
+	+ aus()
+}
+
+class Pedal {
+	+ druecken()
+	+ loslassen()
+}
+
+class Schaltung {
+	+ einlegen(gang: int)
+}
+
+class AutoManuell {
+	- gas: Pedal
+	- bremse: Pedal
+	- kupplung: Pedal
+	- zuendung: Zuendung
+	- schaltung: Schaltung
+	- anlassen()
+	- anfahren()
+	- abstellen()
+	+ fahren(km: int)
+}
+
+AutoManuell *-- Zuendung
+AutoManuell *-- Pedal : 3
+AutoManuell *-- Schaltung
+
+@enduml

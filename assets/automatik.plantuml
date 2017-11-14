@@ -1,0 +1,22 @@
+@startuml
+
+class AutoManuell {
+	# gas: Pedal
+	# bremse: Pedal
+	# kupplung: Pedal
+	# zuendung: Zuendung
+	# schaltung: Schaltung
+	- anlassen()
+	- anfahren()
+	- abstellen()
+	+ fahren(km: int)
+}
+
+class AutomatikAuto extends AutoManuell {
+	# automatik: AutomatikGetriebe
+	- anlassen()
+	- anfahren()
+	- abstellen()
+}
+
+@enduml

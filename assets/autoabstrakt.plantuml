@@ -1,0 +1,32 @@
+@startuml
+
+abstract class Auto {
+	# gas: Pedal
+	# bremse: Pedal
+	# zuendung: Zuendung
+
+	# abstract anlassen()
+	# abstract anfahren()
+	# abstract abstellen()
+
+	+ fahren(km: int)
+}
+
+class AutoManuell extends Auto {
+	# kupplung: Pedal
+	# schaltung: Schaltung
+
+	# anlassen()
+	# anfahren()
+	# abstellen()
+}
+
+class AutoAutomatik extends Auto {
+	# automatik: AutomatikGetriebe
+
+	# anlassen()
+	# anfahren()
+	# abstellen()
+}
+
+@enduml

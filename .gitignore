@@ -3,3 +3,12 @@ _site/
 .jekyll-metadata
 Gemfile.lock
 .DS_Store
+.idea/
+.gradletasknamecache
+!gradle-wrapper.jar
+gradle-app.setting
+/out/
+/build/
+/bin/
+.DS_Store
+.gradle

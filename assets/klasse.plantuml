@@ -1,0 +1,18 @@
+@startuml
+
+class MeineKlasse {
+	- privateVariable: int
+	# geschuetzteVariable: float
+	+ oeffentlicheVariable: double
+	
+	- privateMethode(): int
+	# geschuetzteMethode(): double
+	+ oeffentlicheMethode(argument: String): void
+}
+
+interface MeinInterface {
+	+ methode1(arg: int): double
+	+ default methode2(): void
+}
+
+@enduml

@@ -27,7 +27,7 @@ Es werden die wichtigsten Inhalte von [Programmieren 2](https://hsro-wif-prg2.gi
 
 # Terminplan
 
-- **Vererbung und abstrakte Klassen (14.11.2017)**
+- **[Vererbung und abstrakte Klassen](/vererbung-und-abstrakte-klassen/) (14.11.2017)**
 
 	Abstrakten Klassen erklärt am Beispiel der Implementierung eines Zustandsautomaten.
 
