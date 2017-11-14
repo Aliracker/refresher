@@ -33,13 +33,13 @@ interface I {
     void methode();  // keine Implementierung
 }
 
-class K implements I {
+class K1 implements I {
     public void methode() {
         System.out.println("Hallo, Welt!");
     }
 }
 
-I inst = new K();
+I inst = new K1();
 ```
 
 ```java
@@ -49,11 +49,11 @@ class B {
     }
 }
 
-class K extends B {
+class K2 extends B {
     // methode() ist bereits verfügbar, und kann überschrieben werden
 }
 
-B inst = new K();
+B inst = new K2();
 ```
 
 ---
@@ -72,9 +72,9 @@ class K extends B {
 }
 ```
 ```java
-K k = new B();
-k.methode1();  // "Ich bin Klasse B.methode1()"
-k.methode2();  // "Ich bin KLasse K.methode2()"
+B b = new K();
+b.methode1();  // "Ich bin Klasse B.methode1()"
+b.methode2();  // "Ich bin KLasse K.methode2()"
 ```
 
 ---

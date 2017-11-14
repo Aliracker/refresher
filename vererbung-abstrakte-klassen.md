@@ -34,14 +34,14 @@ interface I {
 }
 ```
 ```java
-class K implements I {
+class K2 implements I {
 	public void methode() {
 		System.out.println("Hallo, Welt!");
 	}
 }
 ```
 ```java
-I inst = new K();
+I inst = new K2();
 ```
 
 Soll eine Klasse eine andere erweitern, so definiert man sie mit `class K extends B`.
@@ -55,12 +55,12 @@ class B {
 }
 ```
 ```java
-class K extends B {
+class K1 extends B {
 	// methode() ist bereits verfügbar, und kann überschrieben werden
 }
 ```
 ```java
-B inst = new K();
+B inst = new K1();
 ```
 
 Klassen können von höchstens einer Klasse Erben, aber mehrere Schnittstellen implementieren (getrennt durch `,`).
@@ -83,9 +83,9 @@ class K extends B {
 }
 ```
 ```java
-K k = new B();
-k.methode1();  // "Ich bin Klasse B.methode1()"
-k.methode2();  // "Ich bin KLasse K.methode2()"
+B b = new K();
+b.methode1();  // "Ich bin Klasse B.methode1()"
+b.methode2();  // "Ich bin KLasse K.methode2()"
 ```
 
 Innerhalb einer Klasse kann die Methode einer Basisklasse mit dem `super` Operator (statt `this`) aufgerufen werden.
