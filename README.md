@@ -27,31 +27,31 @@ Es werden die wichtigsten Inhalte von [Programmieren 2](https://hsro-wif-prg2.gi
 
 # Terminplan
 
-- **[Vererbung und abstrakte Klassen](vererbung-und-abstrakte-klassen/) (14.11.2017)**
+- **Vererbung und abstrakte Klassen (14.11.2017, [Folien](vererbung-und-abstrakte-klassen-slides/), [Aufgabe](vererbung-und-abstrakte-klassen/))**
 
 	Abstrakten Klassen erklärt am Beispiel der Implementierung eines Zustandsautomaten.
 
-- **Listen und Generics (21.11.2017)**
+- **Listen und Generics (28.11.2017, [Aufgabe](listen-generics/))**
 
 	Die Liste ist eine der wichtigsten Datenstrukturen der Informatik.
-	Java's Generics erlauben uns, diese unabhängig vom Datentyp zu implementieren.
+	Mit Generics können wir diese unabhängig vom Datentyp implementieren.
 
-- **Set als Binärbaum (28.11.2017)**
+- **Set als Binärbaum (5.12.2017)**
 
 	Ein Set ist definiert als eine (ungeordnete) Menge von Elementen ohne Duplikate.
-	Die Interfaces `Comparable<T>` und `Comparator<T>` helfen uns beim aufbau von Binärbäumen, welche Sets effizient modellieren können.
+	Die Interfaces `Comparable<T>` und `Comparator<T>` helfen uns beim Aufbau von Binärbäumen, welche Sets effizient modellieren können.
 
 - **Iterator und Factory (12.12.2017)**
 
 	Ein `Iterator<T>` ist ein Objekt, welches die Traversierung einer Datenstruktur ermöglicht, ohne deren innere Struktur zu kennen.
 	Eine _Factory_ stellt Objekte her, welche einem Interface genügen.
 
-- **Rekursion (5.12.2017)**
+- **Rekursion (19.12.2017)**
 	
 	Rekursive Funktionen rufen sich selbst wieder auf.
 	Wir betrachten als Beispiele die Pre-/In-/Postfixschreibweise, binäre Suche, sowie Sortieren am Beispiel von merge sort.
 
-- **Parallele Verarbeitung (19.12.2017)**
+- **Parallele Verarbeitung (9.1.2017)**
 
 	Threads helfen bei der parallelen Verarbeitung von Daten.
 	Gibt es sowohl Produzenten als auch Konsumenten, so kann es zu Deadlocks kommen.

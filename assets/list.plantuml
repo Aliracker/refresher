@@ -1,0 +1,29 @@
+@startuml
+interface List<T>{
+	+ add(v: T)
+	+ get(i: int): T
+	+ remove(i: int): T
+	+ insert(i: int, v: T)
+	+ size(): int
+}
+
+class LinkedList<T> implements List {
+	+ add(v: T)
+	+ get(i: int): T
+	+ remove(i: int): T
+	+ insert(i: int, v: T)
+	+ size(): int
+	- first: Element
+}
+
+class Element<T> {
+	Element(v: T)
+	next: Element
+	value: T 
+}
+
+LinkedList +-right- Element
+LinkedList *-right- Element
+Element *-- Element
+
+@enduml

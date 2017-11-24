@@ -1,0 +1,96 @@
+@startuml
+allow_mixing
+
+actor user
+
+object list1 {
+	first = null
+}
+
+user -right-> list1
+
+@enduml
+
+@startuml
+allow_mixing
+
+actor user
+
+object list1 {
+	first = element1
+}
+
+user -right-> list1
+
+object element1 {
+	next = element2
+	value = "Mary"
+}
+
+object element2 {
+	next = element3
+	value = "had"
+}
+object element3 {
+	next = element4
+	value = "a"
+}
+object element4 {
+	next = element5
+	value = "little"
+}
+object element5 {
+	value = "lamb"
+	next = null
+}
+
+list1 *-right-> element1
+element1 *-right-> element2
+element2 *-right-> element3
+element3 *-right-> element4
+element4 *-right-> element5
+
+@enduml
+
+@startuml
+allow_mixing
+
+actor user
+
+object list1 {
+	first = element1
+}
+
+user -right-> list1
+
+object element1 {
+	next = element2
+	value = "Mary"
+}
+
+object element2 {
+	next = element3
+	value = "had"
+}
+
+object element3 {
+	next = element5
+	value = "a"
+}
+
+object element4 {
+	next = element5
+	value = "little"
+}
+
+object element5 {
+	value = "lamb"
+	next = null
+}
+
+list1 *-right-> element1
+element1 *-right-> element2
+element2 *-right-> element5
+element4 *-right-> element5
+
+@enduml
