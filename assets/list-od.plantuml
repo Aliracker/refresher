@@ -90,7 +90,7 @@ object element5 {
 
 list1 *-right-> element1
 element1 *-right-> element2
-element2 *-right-> element5
-element4 *-right-> element5
+element2 *-right-> element3
+element3 *-right-> element5
 
 @enduml
