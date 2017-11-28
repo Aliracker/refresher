@@ -6,10 +6,12 @@ public class Beispiel {
 
 		li.add("Hans");
 		li.add("Dampf");
-		li.add(3);
+		li.add("geht");  // 2
+		li.add("nach");
+		li.add("Hause");  // 4
 
-		for (int i = 0; i < li.size(); i++) {
-			System.out.println((String) li.get(i));
-		}
+		li.insert(4, "gerne");
+
+		System.out.println(li);
 	}
 }
