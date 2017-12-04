@@ -36,7 +36,7 @@ Es werden die wichtigsten Inhalte von [Programmieren 2](https://hsro-wif-prg2.gi
 	Die Liste ist eine der wichtigsten Datenstrukturen der Informatik.
 	Mit Generics können wir diese unabhängig vom Datentyp implementieren.
 
-- **Set als Binärbaum (5.12.2017)**
+- **Set als Binärbaum (5.12.2017, [Aufgabe](sets-baeume/))**
 
 	Ein Set ist definiert als eine (ungeordnete) Menge von Elementen ohne Duplikate.
 	Die Interfaces `Comparable<T>` und `Comparator<T>` helfen uns beim Aufbau von Binärbäumen, welche Sets effizient modellieren können.

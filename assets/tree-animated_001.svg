@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="102px" preserveAspectRatio="none" style="width:484px;height:102px;" version="1.1" viewBox="0 0 484 102" width="484px" zoomAndPan="magnify"><defs><filter height="300%" id="f2a03wrjrs292" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity User--><ellipse cx="21.5" cy="18" fill="#FEFECE" filter="url(#f2a03wrjrs292)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M21.5,26 L21.5,53 M8.5,34 L34.5,34 M21.5,53 L8.5,68 M21.5,53 L34.5,68 " fill="#FEFECE" filter="url(#f2a03wrjrs292)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="6" y="88.5352">User</text><rect fill="#FEFECE" filter="url(#f2a03wrjrs292)" height="37.9102" style="stroke: #A80036; stroke-width: 1.5;" width="52" x="266" y="30.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="33" x="275.5" y="44.1016">baum</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="267" x2="317" y1="48.6328" y2="48.6328"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="40" x="272" y="62.3008">root = 4</text><rect fill="#FEFECE" filter="url(#f2a03wrjrs292)" height="49.6875" style="stroke: #A80036; stroke-width: 1.5;" width="67" x="406" y="24.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="435.5" y="38.1016">4</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="407" x2="472" y1="42.6328" y2="42.6328"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="49" x="412" y="56.3008">left = null</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="55" x="412" y="68.0781">right = null</text><!--link User to baum--><path d="M37.2124,49.5 C80.6653,49.5 203.0483,49.5 260.9272,49.5 " fill="none" id="User-baum" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="265.9876,49.5,256.9876,45.5,260.9876,49.5,256.9876,53.5,265.9876,49.5" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="130" y="46.0684">.add(4)</text><!--link baum to 4--><path d="M318.0305,49.5 C340.9808,49.5 374.7357,49.5 400.8413,49.5 " fill="none" id="baum-4" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="405.955,49.5,396.955,45.5,400.955,49.5,396.955,53.5,405.955,49.5" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="26" x="349" y="46.0684">root</text><!--
+@startuml
+allow_mixing
+left to right direction
+
+actor User
+
+object baum {
+	root = 4
+}
+
+User -..-> baum : ".add(4)"
+
+object 4 {
+	left = null
+	right = null
+}
+
+baum - -> 4 : root
+
+@enduml
+
+PlantUML version 1.2017.16(Sun Sep 03 12:53:37 CEST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_144-b01
+Operating System: Mac OS X
+OS Version: 10.13.1
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

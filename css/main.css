@@ -77,6 +77,10 @@ img {
   max-width: 100%;
 }
 
+.imgcols img {
+  vertical-align: top;
+}
+
 /* Custom CSS for pages */
 .figcenter {
   text-align: center;

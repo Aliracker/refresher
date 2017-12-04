@@ -1,0 +1,168 @@
+@startuml
+allow_mixing
+
+left to right direction
+
+actor User
+
+object baum {
+	root = null
+}
+
+User -..-> baum : "new Baum<>()"
+
+@enduml
+
+@startuml
+allow_mixing
+left to right direction
+
+actor User
+
+object baum {
+	root = 4
+}
+
+User -..-> baum : ".add(4)"
+
+object 4 {
+	left = null
+	right = null
+}
+
+baum --> 4 : root
+
+@enduml
+
+@startuml
+allow_mixing
+left to right direction
+
+actor User
+
+object baum {
+	root = 4
+}
+
+User -..-> baum : ".add(2)"
+
+object 4 {
+	left = 2
+	right = null
+}
+
+baum --> 4 : root
+
+object 2 {
+	left = null
+	right = null
+}
+
+4 --> 2 : "kleiner 4"
+
+@enduml
+
+@startuml
+allow_mixing
+left to right direction
+
+actor User
+
+object baum {
+	root = 4
+}
+
+User -..-> baum : ".add(3)"
+
+object 4 {
+	left = 2
+	right = null
+}
+
+baum --> 4 : root
+
+object 2 {
+	left = null
+	right = 3
+}
+
+4 --> 2 : "kleiner 4"
+
+object 3
+
+2 --> 3 : "groesser 2"
+
+
+@enduml
+
+@startuml
+left to right direction
+allow_mixing
+
+actor User
+
+object baum {
+	root = 4
+}
+
+User -..-> baum: ".add(6)"
+
+object 4 {
+	left = 2
+	right = null
+}
+
+baum --> 4 : root
+
+object 2 {
+	left = null
+	right = 3
+}
+
+object 3
+
+2 --> 3 : "groesser 3"
+
+object 6
+
+4 --> 2 : "kleiner 4"
+4 --> 6 : "groesser 4"
+
+@enduml
+
+@startuml
+left to right direction
+allow_mixing
+
+actor User
+
+object baum {
+	root = 4
+}
+
+User -..-> baum: ".add(1)"
+
+object 4 {
+	left = 2
+	right = 6
+}
+
+baum --> 4 : root
+
+object 2 {
+	left = 1
+	right = 3
+}
+
+object 1
+object 3
+
+2 --> 1 : "kleiner 2"
+2 --> 3 : "groesser 2"
+
+object 6
+
+4 --> 2 : "kleiner 4"
+4 --> 6 : "groesser 4"
+
+@enduml

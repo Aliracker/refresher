@@ -1,5 +1,6 @@
 package de.fhro.wif.prg2.listen;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class ListeImpl<T> implements Liste<T> {
@@ -115,5 +116,23 @@ public class ListeImpl<T> implements Liste<T> {
 		return size;
 
 
+	}
+
+	@Override
+	public Iterator<T> iterator() {
+		return new Iterator<T>() {
+			Element it = first;
+			@Override
+			public boolean hasNext() {
+				return first != null;
+			}
+
+			@Override
+			public T next() {
+				T e = it.value;
+				it = it.next;
+				return e;
+			}
+		};
 	}
 }

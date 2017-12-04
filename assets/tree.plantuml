@@ -1,0 +1,35 @@
+@startuml
+allow_mixing
+
+actor User
+
+object baum {
+	root = 4
+}
+
+User -.right.-> baum
+
+object 4 {
+	left = 2
+	right = 6
+}
+
+baum --> 4 : root
+
+object 2 {
+	left = 1
+	right = 3
+}
+
+object 1
+object 3
+
+2 --> 1
+2 --> 3
+
+object 6
+
+4 --> 2
+4 --> 6
+
+@enduml
