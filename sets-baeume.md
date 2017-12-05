@@ -16,7 +16,7 @@ Anders als bei `List<T>` gibt es nun kein `.get(int i)`, um ein Element an besti
 Ebenso ist die Signatur der `.remove()` Methode anders: Sie nimmt ein Element entgegen, keinen Index.
 
 ```java
-interface Set<T> implements Iterable<T> {
+interface Set<T> extends Iterable<T> {
 	void add(T t);
 	boolean contains(T t);
 	T remove(T t);
