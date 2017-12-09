@@ -143,12 +143,12 @@ class MeinIterable<T> implements Iterable<T> {
 
 # Aufgabe
 
-Gegeben ist das Paket [de.fhro.wif.prg2.iteratoren](/src/main/java/de/fhro/wif/prg2/iteratoren/), mit den Klassen [de.fhro.wif.prg2.iteratoren.ListImpl](/src/main/java/de/fhro/wif/prg2/iteratoren/ListImpl.java) und [de.fhro.wif.prg2.iteratoren.BinaryTree](/src/main/java/de/fhro/wif/prg2/iteratoren/BinaryTree.java) sowie den dazugehörigen Tests in [de.fhro.wif.prg2.iteratoren.IteratorenTests](/src/test/java/de/fhro/wif/prg2/iteratoren/IteratorenTests.java).
+Gegeben ist das Paket [de.fhro.wif.prg2.iteratoren](https://github.com/hsro-wif-prg2/refresher/tree/master/src/main/java/de/fhro/wif/prg2/iteratoren/), mit den Klassen [de.fhro.wif.prg2.iteratoren.ListImpl](https://github.com/hsro-wif-prg2/refresher/tree/master/src/main/java/de/fhro/wif/prg2/iteratoren/ListImpl.java) und [de.fhro.wif.prg2.iteratoren.BinaryTree](https://github.com/hsro-wif-prg2/refresher/tree/master/src/main/java/de/fhro/wif/prg2/iteratoren/BinaryTree.java) sowie den dazugehörigen Tests in [de.fhro.wif.prg2.iteratoren.IteratorenTests](https://github.com/hsro-wif-prg2/refresher/tree/master/src/test/java/de/fhro/wif/prg2/iteratoren/IteratorenTests.java).
 
 Implementieren Sie die `iterator()` Methode der beiden Klassen, so dass der Testcase erfüllt ist.
 Implementieren Sie dazu den jeweiligen Iterator entweder als innere Klasse, oder als anonyme innere Klasse.
 
 ### Hinweis
 
-Die Klassen [de.fhro.wif.prg2.iteratoren.BinaryTreeWithIterator](/src/main/java/de/fhro/wif/prg2/iteratoren/BinaryTreWithIterator.java) und [de.fhro.wif.prg2.iteratoren.ListImplWithIterator](/src/main/java/de/fhro/wif/prg2/iteratoren/ListImplWithIterator.java) enthalten jeweils die Lösung.
+Die Klassen [de.fhro.wif.prg2.iteratoren.BinaryTreeWithIterator](https://github.com/hsro-wif-prg2/refresher/tree/master/src/main/java/de/fhro/wif/prg2/iteratoren/BinaryTreWithIterator.java) und [de.fhro.wif.prg2.iteratoren.ListImplWithIterator](https://github.com/hsro-wif-prg2/refresher/tree/master/src/main/java/de/fhro/wif/prg2/iteratoren/ListImplWithIterator.java) enthalten jeweils die Lösung.
 Versuchen Sie aber diese selbst zu erarbeiten!
