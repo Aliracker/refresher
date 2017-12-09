@@ -150,5 +150,5 @@ Implementieren Sie dazu den jeweiligen Iterator entweder als innere Klasse, oder
 
 ### Hinweis
 
-Die Klassen [de.fhro.wif.prg2.iteratoren.BinaryTreeWithIterator](https://github.com/hsro-wif-prg2/refresher/tree/master/src/main/java/de/fhro/wif/prg2/iteratoren/BinaryTreWithIterator.java) und [de.fhro.wif.prg2.iteratoren.ListImplWithIterator](https://github.com/hsro-wif-prg2/refresher/tree/master/src/main/java/de/fhro/wif/prg2/iteratoren/ListImplWithIterator.java) enthalten jeweils die Lösung.
+Die Klassen [de.fhro.wif.prg2.iteratoren.BinaryTreeWithIterator](https://github.com/hsro-wif-prg2/refresher/tree/master/src/main/java/de/fhro/wif/prg2/iteratoren/BinaryTreeWithIterator.java) und [de.fhro.wif.prg2.iteratoren.ListImplWithIterator](https://github.com/hsro-wif-prg2/refresher/tree/master/src/main/java/de/fhro/wif/prg2/iteratoren/ListImplWithIterator.java) enthalten jeweils die Lösung.
 Versuchen Sie aber diese selbst zu erarbeiten!
