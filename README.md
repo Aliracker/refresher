@@ -41,7 +41,7 @@ Es werden die wichtigsten Inhalte von [Programmieren 2](https://hsro-wif-prg2.gi
 	Ein Set ist definiert als eine (ungeordnete) Menge von Elementen ohne Duplikate.
 	Die Interfaces `Comparable<T>` und `Comparator<T>` helfen uns beim Aufbau von Binärbäumen, welche Sets effizient modellieren können.
 
-- **Iterator und Factory (12.12.2017)**
+- **Iterator und Factory (12.12.2017, [Aufgabe](iterator-factory/))**
 
 	Ein `Iterator<T>` ist ein Objekt, welches die Traversierung einer Datenstruktur ermöglicht, ohne deren innere Struktur zu kennen.
 	Eine _Factory_ stellt Objekte her, welche einem Interface genügen.

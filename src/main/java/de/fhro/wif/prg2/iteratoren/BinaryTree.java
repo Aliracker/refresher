@@ -1,9 +1,16 @@
-package de.fhro.wif.prg2.sets;
+package de.fhro.wif.prg2.iteratoren;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class BinaryTree<T extends Comparable<T>> implements Set<T> {
-	private class Element {
+	@Override
+	public Iterator<T> iterator() {
+		// TODO
+		throw new UnsupportedOperationException();
+	}
+
+	protected class Element {
 		T value;
 		Element(T value) {
 			this.value = value;
@@ -17,7 +24,7 @@ public class BinaryTree<T extends Comparable<T>> implements Set<T> {
 		}
 	}
 
-	private Element root;
+	protected Element root;
 
 	public String toString() {
 		if (root == null) return "()";
