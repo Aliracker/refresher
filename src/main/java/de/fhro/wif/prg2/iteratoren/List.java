@@ -6,4 +6,7 @@ public interface List<T> extends Iterable<T> {
 	T get(int i);
 	T remove(int i);
 	int size();
+	default boolean contains(T t) {
+		throw new UnsupportedOperationException();
+	}
 }

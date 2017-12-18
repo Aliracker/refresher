@@ -144,6 +144,22 @@ public class ListImpl<T> implements List<T> {
 	}
 
 	@Override
+	public boolean contains(T t) {
+		if (first == null)
+			return false;
+
+		Element it = first;
+		while (it != null) {
+			if (it.value.equals(t))
+				return true;
+			it = it.next;
+		}
+
+		// nicht gefunden!
+		return false;
+	}
+
+	@Override
 	public Iterator<T> iterator() {
 		return new Iterator<T>() {
 			Element it = first;

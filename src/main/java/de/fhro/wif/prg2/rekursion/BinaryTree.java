@@ -44,6 +44,7 @@ public class BinaryTree<T extends Comparable<T>> implements Set<T> {
 
 	@Override
 	public void add(T t) {
+		// Achtung: Diese Methode kann unverändert bleiben.
 		insert(new Element(t));
 	}
 
