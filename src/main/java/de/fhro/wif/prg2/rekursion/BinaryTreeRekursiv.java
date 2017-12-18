@@ -2,9 +2,7 @@ package de.fhro.wif.prg2.rekursion;
 
 import de.fhro.wif.prg2.iteratoren.Set;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 public class BinaryTreeRekursiv<T extends Comparable<T>> implements Set<T> {
 
@@ -14,24 +12,6 @@ public class BinaryTreeRekursiv<T extends Comparable<T>> implements Set<T> {
 			this.value = value;
 		}
 		Element left, right;
-
-		@Override
-		public String toString() {
-			// ( value left-tree right-tree )
-
-			String s = "(" + value.toString();
-			if (left != null)
-				s = s + " " + left.toString();
-			else
-				s = s + " -";
-
-			if (right != null)
-				s = s + " " + right.toString();
-			else
-				s = s + " -";
-
-			return s + ")";
-		}
 
 		void insert(Element element) {
 			if (element.value.compareTo(value) < 0) {
@@ -104,8 +84,31 @@ public class BinaryTreeRekursiv<T extends Comparable<T>> implements Set<T> {
 
 	@Override
 	public String toString() {
-		if (root == null) return "()";
-		else return root.toString();
+		if (root == null)
+			return "()";
+
+		StringBuffer sb = new StringBuffer();
+
+		// Marker! Immer wenn wir den sehen, muessen wir eine Klammer schliessen.
+		Element close = new Element(null);
+
+		Stack<Element> agenda = new Stack<>();
+		agenda.push(root);
+
+		while (agenda.size() > 0) {
+			Element e = agenda.pop();
+			if (e == null) sb.append(" -");
+			else if (e == close) sb.append(")");
+			else {
+				sb.append(" (").append(e.value);
+				// Achtung, Stack! Also in umgekehrter Reihenfolge einfügen.
+				agenda.push(close);
+				agenda.push(e.right);
+				agenda.push(e.left);
+			}
+		}
+
+		return sb.toString().trim();  // trim wegen erstem leerzeichen!
 	}
 
 	@Override

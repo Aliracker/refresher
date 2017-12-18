@@ -46,10 +46,10 @@ Es werden die wichtigsten Inhalte von [Programmieren 2](https://hsro-wif-prg2.gi
 	Ein `Iterator<T>` ist ein Objekt, welches die Traversierung einer Datenstruktur ermöglicht, ohne deren innere Struktur zu kennen.
 	Eine _Factory_ stellt Objekte her, welche einem Interface genügen.
 
-- **Rekursion (19.12.2017)**
+- **Rekursion (19.12.2017, [Aufgabe](rekursion/))**
 	
 	Rekursive Funktionen rufen sich selbst wieder auf.
-	Wir betrachten als Beispiele die Pre-/In-/Postfixschreibweise, binäre Suche, sowie Sortieren am Beispiel von merge sort.
+	Wir betrachten als Beispiele die `toString()` Methoden von Listen und Bäumen, die binäre Suche `contains(T t)`, sowie das Sortieren am Beispiel von merge-sort.
 
 - **Parallele Verarbeitung (9.1.2017)**
 
@@ -57,7 +57,7 @@ Es werden die wichtigsten Inhalte von [Programmieren 2](https://hsro-wif-prg2.gi
 	Gibt es sowohl Produzenten als auch Konsumenten, so kann es zu Deadlocks kommen.
 
 
-# Weitere Anregungen zum Selbstudium
+# Weitere Anregungen zum Selbststudium
 
 - Iteratoren: vorwärts, rückwärts, sortiert, sortiert mit Comparator.
 - Baumtraversierung: Rekursiver Links- und Rechtsabstieg; iterativ mit Agenda

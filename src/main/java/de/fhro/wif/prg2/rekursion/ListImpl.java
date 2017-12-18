@@ -9,13 +9,31 @@ public class ListImpl<T> implements List<T> {
 	protected class Element {
 		T value;
 		Element next;
+
 		Element(T value) { this.value = value; }
+
+		int size() {
+			if (next == null)
+				return 1;
+			else
+				return 1 + next.size();
+		}
+
+		@Override
+		public String toString() {
+			if (next == null)
+				return value.toString();
+			else
+				return value.toString() + ", " + next.toString();
+		}
 	}
 
 	protected Element first = null;
 
 	@Override
 	public String toString() {
+		/*
+		// iterative Variante:
 		String s = "[";
 		Element it = first;
 
@@ -28,6 +46,13 @@ public class ListImpl<T> implements List<T> {
 		}
 
 		return s + "]";
+		*/
+
+		// rekursive variante:
+		if (first == null)
+			return "[]";
+		else
+			return "[" + first.toString() + "]";
 	}
 
 	@Override
@@ -112,14 +137,10 @@ public class ListImpl<T> implements List<T> {
 
 	@Override
 	public int size() {
-		// return size;
-		Element it = first;
-		int size = 0;
-		while (it != null) {
-			it = it.next;
-			size++;
-		}
-		return size;
+		if (first == null)
+			return 0;
+		else
+			return first.size();
 	}
 
 	@Override
