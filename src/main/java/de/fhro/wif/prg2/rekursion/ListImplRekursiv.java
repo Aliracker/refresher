@@ -59,6 +59,15 @@ public class ListImplRekursiv<T> implements List<T> {
 			else
 				return 1 + next.size();
 		}
+
+		boolean contains(T t) {
+			if (value.equals(t))
+				return true;
+			else if (next == null)
+				return false;
+			else
+				return next.contains(t);
+		}
 	}
 
 	protected Element first = null;
@@ -119,6 +128,14 @@ public class ListImplRekursiv<T> implements List<T> {
 			return 0;
 		else
 			return first.size();
+	}
+
+	@Override
+	public boolean contains(T t) {
+		if (first == null)
+			return false;
+		else
+			return first.contains(t);
 	}
 
 	@Override

@@ -149,6 +149,7 @@ Für alle Aufgaben gilt zu Übungszwecken: Es darf nur `if`, `else if`, `else` f
 	- Beginnen Sie mit den `contains()` und `size()` Methoden.	- 
 	- Die Methode `toString()` wurde bereits rekursiv implementiert; siehe Bonusaufgabe unten.
 3. Implementieren Sie die `MergeSort.sort()` Methode rekursiv; es wird eine Hilfsmethode `MergeSort.merge` benötigt.
+    Verwenden Sie die Methode `List.subList(from, to)` um Listen aufzuteilen.
 
 
 # Bonusaufgabe zum Knobeln
