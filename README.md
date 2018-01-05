@@ -51,7 +51,7 @@ Es werden die wichtigsten Inhalte von [Programmieren 2](https://hsro-wif-prg2.gi
 	Rekursive Funktionen rufen sich selbst wieder auf.
 	Wir betrachten als Beispiele die `toString()` Methoden von Listen und Bäumen, die binäre Suche `contains(T t)`, sowie das Sortieren am Beispiel von merge-sort.
 
-- **Parallele Verarbeitung (9.1.2017)**
+- **Parallele Verarbeitung (9.1.2017, [Aufgabe](parallel/))**
 
 	Threads helfen bei der parallelen Verarbeitung von Daten.
 	Gibt es sowohl Produzenten als auch Konsumenten, so kann es zu Deadlocks kommen.

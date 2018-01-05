@@ -1,0 +1,83 @@
+@startuml
+'modeled as process
+
+OS --> main : java Erbsenzaehler
+activate main
+
+main --> main : ez1 = new Erbsenzaehler(...)
+main --> main : ez2 = new Erbsenzaehler(...)
+
+main --> ez1.zaehlen : ez1.zaehlen()
+deactivate main
+activate ez1.zaehlen
+
+note right
+	Bürokrat 1 beginnt...
+	Bürokrat 1 ist fertig!
+endnote
+
+ez1.zaehlen --> main
+deactivate ez1.zaehlen
+activate main
+
+main --> ez2.zaehlen : ez2.zaehlen()
+deactivate main
+activate ez2.zaehlen
+
+note right
+	Bürokrat 2 beginnt...
+	Bürokrat 2 ist fertig!
+endnote
+
+ez2.zaehlen --> main
+deactivate ez2.zaehlen
+activate main
+
+main --> main
+note right : "main() fertig!"
+
+main --> OS
+
+@enduml
+
+
+@startuml
+'modeled with threads
+
+OS --> main : java Erbsenzaehler
+activate main
+
+main --> main : ez1 = new Erbsenzaehler(...)
+main --> main : ez2 = new Erbsenzaehler(...)
+
+main --> ez1 : new Thread(ez1).start()
+activate ez1
+note right : Bürokrat 1 is starting...
+ez1 --> main
+
+main --> ez2 : new Thread(ez2).start()
+activate ez2
+note right : Bürokrat 2 is starting...
+ez2 --> main
+
+main --> main
+note left : "main() fertig!"
+deactivate main
+
+
+ez1 --> ez1 : Arrays.sort(...)
+
+note right of ez1: "Bürokrat 1 is done!"
+
+deactivate ez1
+
+ez2 --> ez2 : Arrays.sort(...)
+
+note right of ez2: "Bürokrat 2 is done!"
+
+deactivate ez2
+
+
+main --> OS
+
+@enduml
